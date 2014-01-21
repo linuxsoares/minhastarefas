@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /minhastarefas                              controllers.Application.index()
+GET     /minhastarefas/listar                       controllers.Servico.listar()
+DELETE  /minhastarefas/excluir/:id                  controllers.Servico.excluir(id: Long)
+PUT     /minhastarefas/adicionar                    controllers.Servico.adicionar()
+POST    /minhastarefas/completar/:id                controllers.Servico.completar(id: Long)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
